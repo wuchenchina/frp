@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 WORKDIR /data
 
-RUN sudo sed -ri.bak -e 's/\/\/.*?(archive.ubuntu.com|mirrors.*?)\/ubuntu/\/\/mirrors.aliyun.com\/ubuntu/g' -e '/security.ubuntu.com\/ubuntu/d' /etc/apt/sources.list
+RUN sed -ri.bak -e 's/\/\/.*?(archive.ubuntu.com|mirrors.*?)\/ubuntu/\/\/mirrors.aliyun.com\/ubuntu/g' -e '/security.ubuntu.com\/ubuntu/d' /etc/apt/sources.list
 
 RUN apt-get update -y ; apt-get install -y wget git tar gzip
 
