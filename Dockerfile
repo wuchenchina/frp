@@ -18,4 +18,4 @@ RUN chmod +x *
 
 RUN mkdir -p config
 
-CMD ["./frps", "-c", "./config/frps.json"]
+CMD ["./frps", "-c", "./config/frps.ini"]
