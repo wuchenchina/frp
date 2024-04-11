@@ -16,4 +16,6 @@ RUN rm -rf frp_0.57.0_linux_amd64.tar.gz frp_0.57.0_linux_amd64
 
 RUN chmod +x *
 
-CMD ["./frps", "-c", "./frps.toml"]
+RUN mkdir -p config
+
+CMD ["./frps", "-c", "./config/frps.json"]
