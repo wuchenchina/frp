@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+    frp:
+        image: 'wuchenchina/frp:1.0.0'
+        volumes:
+            - './frps.toml:/data/ftps.toml'
+        networks:
+            host: {}
+        tty: true
+        stdin_open: true
+networks:
+    host: {}
