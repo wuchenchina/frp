@@ -3,7 +3,7 @@ services:
     frp:
         image: 'wuchenchina/frp:1.0.0'
         volumes:
-            - './frps.ini:/data/ftps.ini'
+            - './frps.toml:/data/ftps.toml'
         network_mode: "host"
         tty: true
         stdin_open: true

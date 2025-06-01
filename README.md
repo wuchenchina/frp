@@ -10,5 +10,5 @@ docker build -t wuchenchina/frp:1.0.0 .
 
 run：
 ```
-docker run -it --rm --network=host -v ./frps.ini:/data/ftps.ini wuchenchina/frp:1.0.0
+docker run -it --rm --network=host -v ./frps.toml:/data/ftps.toml wuchenchina/frp:1.0.0
 ```
