@@ -4,9 +4,7 @@ services:
         image: 'wuchenchina/frp:1.0.0'
         volumes:
             - './frps.toml:/data/ftps.toml'
-        networks:
-            host: {}
+        network_mode: "host"
         tty: true
         stdin_open: true
-networks:
-    host: {}
+        restart: "no"
